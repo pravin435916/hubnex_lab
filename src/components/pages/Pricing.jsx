@@ -1,5 +1,8 @@
 import React from 'react';
 import { MdDone } from "react-icons/md";
+import {motion} from "framer-motion"
+import { SlideDown } from '../../animations';
+import '../../App.css'
 export const Pricing = () => {
     return (
         <div className='w-full h-full overflow-hidden relative my-6'>
@@ -8,7 +11,9 @@ export const Pricing = () => {
                 <span className='text-3xl sm:text-5xl font-bold sm:w-[32rem] text-center'>A more effective way to track progress</span>
                 <span className='text-xl sm:w-[32rem] text-center'>Effortlessly turn your ideas into a fully functional, responsive, no-code SaaS website in just minutes with the set of free components for Framer.</span>
                 <div className='w-full flex justify-center sm:justify-end items-center sm:items-end flex-col sm:flex-row gap-4' >
-                    <div className='sm:w-1/3 h-full flex justify-start  shadow-xl flex-col p-10 gap-6 border rounded-[0.8rem] mx-8'>
+                    <motion.div
+                    {...SlideDown}
+                     className='sm:w-1/3 h-full flex justify-start  shadow-xl flex-col p-10 gap-6 border rounded-[0.8rem] mx-8'>
                         <span>free</span>
                         <span><span className='text-3xl font-bold'>0$</span>/month</span>
                         <span className='text-white bg-black p-2 border rounded-lg text-center '>Get Started For free</span>
@@ -34,9 +39,14 @@ export const Pricing = () => {
                                 <span>Basic support</span>
                             </div>
                         </div>
-                    </div>
-                    <div className='sm:w-1/3 h-full flex justify-start  shadow-xl flex-col p-10 gap-6 border rounded-[0.8rem] mx-8 bg-black text-white'>
+                    </motion.div>
+                    <motion.div 
+                    {...SlideDown}
+                    className='sm:w-1/3 h-full flex justify-start  shadow-xl flex-col p-10 gap-6 border rounded-[0.8rem] mx-8 bg-black text-white'>
+                        <div className='w-full flex justify-between items-center'>
                         <span>Pro</span>
+                        <span className='border-[1px] p-2 rounded-lg rainbow'>Most Popular</span>
+                        </div>
                         <span><span className='text-3xl font-bold'>9$</span>/month</span>
                         <span className='text-black bg-white p-2 border rounded-lg text-center '>Sign up Now</span>
                         <div className='flex flex-col gap-2'>
@@ -69,8 +79,10 @@ export const Pricing = () => {
                                 <span>Export support</span>
                             </div>
                         </div>
-                    </div>
-                    <div className='sm:w-1/3 h-full flex justify-start  shadow-xl flex-col p-10 gap-6 border rounded-[0.8rem] mx-8'>
+                    </motion.div>
+                <motion.div 
+                    {...SlideDown}
+                    className='sm:w-1/3 h-full flex justify-start  shadow-xl flex-col p-10 gap-6 border rounded-[0.8rem] mx-8'>
                         <span>Business</span>
                         <span><span className='text-3xl font-bold'>19$</span>/month</span>
                         <span className='text-white bg-black p-2 border rounded-lg text-center '>Sign up Now</span>
@@ -116,7 +128,7 @@ export const Pricing = () => {
                                 <span>Advanced security features</span>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

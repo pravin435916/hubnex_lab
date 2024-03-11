@@ -6,7 +6,8 @@ import { Features } from './Features';
 import { Help } from './Help';
 import { Pricing } from './Pricing';
 import { Customers } from './Customers';
-
+import {motion} from "framer-motion"
+import { FadeUp,SlideDown,SlideUp ,Slideright} from '../../animations';
 function Home() {
     return (
         <>
@@ -14,12 +15,18 @@ function Home() {
                 <div className="h-[90vh] flex justify-center items-center overflow-hidden flex-col sm:flex-row p-10">
                     <img className='w-full absolute top-0 object-cover h-screen -z-10' src="/assets/bg.png" alt="" />
                     <div className='flex flex-col sm:gap-6 w-full sm:w-1/2 ml-4 sm:ml-12 text-left'>
-                        <span className='p-2 w-max border rounded-lg'>Version 2.0 is here</span>
-                        <div className='flex flex-col text-4xl  sm:text-8xl font-bold'>
+                        <motion.span
+                        {...SlideDown}
+                        className='p-2 w-max border rounded-lg'>Version 2.0 is here</motion.span>
+                        <motion.div 
+                        {...Slideright}
+                        className='flex flex-col text-4xl  sm:text-8xl font-bold'>
                             <span>Pathway to </span>
                             <span>productivity</span>
-                        </div>
-                        <span className='text-lg sm:text-xl text-wrap sm:w-[32rem] mt-6'>Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes.</span>
+                        </motion.div>
+                        <motion.span
+                        {...SlideDown}
+                        className='text-lg sm:text-xl text-wrap sm:w-[32rem] mt-6'>Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes.</motion.span>
                         <div className='flex gap-4 mt-4'>
                             <button className='bg-black border-black p-2 text-white rounded-lg'>Get For Free</button>
                             <div className='flex gap-2 items-center'>

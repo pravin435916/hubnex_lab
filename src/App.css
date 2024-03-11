@@ -10,3 +10,19 @@
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
 }
+.updown{
+  animation: updo 1s ease-in-out infinite;
+}
+@keyframes updo {
+  0% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);;
+  }
+}
+.rainbow{
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
